@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="359dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:backgroundTint="#90BD68"
+        android:outlineAmbientShadowColor="@color/purple_500"
+        android:outlineProvider="background"
+        android:text="Excele yukle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="p" />
+
+    <TextView
+        android:id="@+id/beglitxt"
+        android:layout_width="377dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/search_edit_bacground"
+        android:text=" Barcode"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/streetName_b"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="343dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="58dp"
+        android:hint="Street Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beglitxt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/streetName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/apartmentName_b"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="343dp"
+        android:layout_height="65dp"
+        android:hint="Apaertment Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/streetName_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/streetName_b">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/apartmentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/houseName_b"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="343dp"
+        android:layout_height="65dp"
+        android:hint="House Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/streetName_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apartmentName_b">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/houseNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sensorName_b"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="343dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="5dp"
+        android:hint="Sensor Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/streetName_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/houseName_b">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sensorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btngaytadan"
+        android:layout_width="135dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/search_edit_bacground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sensorName_b"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gaytadan almak"
+        android:textColor="#028174"
+        app:layout_constraintEnd_toEndOf="@+id/btngaytadan"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="@+id/btngaytadan"
+        app:layout_constraintTop_toBottomOf="@+id/btngaytadan" />
+
+    <ImageButton
+        android:id="@+id/btnTazeFile"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:onClick="showDiolog"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/search_edit_bacground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toEndOf="@+id/btngaytadan"
+        app:layout_constraintTop_toBottomOf="@+id/sensorName_b"
+        app:srcCompat="@drawable/ic_baseline_playlist_add_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="file doret"
+        android:textColor="#028174"
+        app:layout_constraintEnd_toEndOf="@+id/btnTazeFile"
+        app:layout_constraintStart_toStartOf="@+id/btnTazeFile"
+        app:layout_constraintTop_toBottomOf="@+id/btnTazeFile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
